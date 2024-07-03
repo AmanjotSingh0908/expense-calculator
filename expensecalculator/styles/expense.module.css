@@ -1,0 +1,147 @@
+.page{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expensesContainer{
+    height: 100vh;
+    width: 50%;
+    padding: 40px;
+    padding-top: 50px;
+    border-left: 2px solid var(--border-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    text-align: justify;
+}
+
+.expenseList{
+    padding: 8px;
+}
+
+.eachExpense{
+    padding: 0.5px;
+    
+}
+
+.Total{
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.deleteBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: aliceblue;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.textarea {
+    width: 95%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 10px;
+    resize: none;
+    font-family: var(--font);
+    font-size: 16px;
+    outline: none;
+    border-color: var(--border-color);
+}
+
+
+.UserIdColumn {
+    width: 95%;
+    height: 20px;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 10px;
+    resize: none;
+    font-family: var(--font);
+    font-size: 16px;
+    outline: none;
+    border-color: var(--border-color);
+}
+
+.UserPasswordColumn{
+    width: 95%;
+    height: 20px;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 10px;
+    resize: none;
+    font-family: var(--font);
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--border-color);
+}
+
+.btnGroup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.commonBtn {
+    padding: 6px 20px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: var(--font);
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+.publishBtn {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.clearBtn {
+    background-color: var(--border-color);
+    color: var(--primary);
+}
+
+.submitButton{
+    float: right;
+    margin-top: 5px;
+    background-color: #4834d4;
+    color: var(--white);
+}
+
+
+.ExpenseSelection{
+    margin-top: 20px;
+}
