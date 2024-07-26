@@ -1,0 +1,57 @@
+/* home.module.css */
+
+.cursive {
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+.intro {
+  /* padding: 2px; */
+}
+.intro h2 {
+  font-size: 65px;
+  text-align: center;
+  text-decoration: underline;
+  margin: 0px;
+  padding: 0px;
+}
+
+.intro p {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.main {
+  /* padding: 2px; */
+}
+
+.intro p {
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+.expenseSection{
+  padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 2px;
+}
+
+.expenseGrid1{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+  border-bottom: 2px solid gold;
+  border-radius: 30px;
+}
+
+.expenseGridImg{
+  width: 220px;
+  height: 180px;
+  border-radius: 30px;
+  padding: 5px;
+}

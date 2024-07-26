@@ -68,7 +68,6 @@ export default function AddExpense() {
 
   const handleAdd = useCallback(() => {
     const isDataValid = validateData();
-    // console.log(isDataValid);
     if (!isDataValid?.isValid) {
       // "?" intially isValid undefined hai but it will be defined later on...so code waits for it to get the value
       return toastMessage.warning(isDataValid?.msg);
@@ -79,7 +78,6 @@ export default function AddExpense() {
         ...prevExpenses,
         { option: expenseOption, amount: parseFloat(expenseMoneySpent) },
       ]);
-      console.log(expenses);
       setexpenseMoneySpent("");
       setExpenseOption(options[0]);
     }
@@ -102,14 +100,15 @@ export default function AddExpense() {
       setLoading(true);
       const promises = expenses.map(async (expense) => {
         const { option, amount } = expense;
-        const response = await axios.post("http://localhost:5002/users/expense", {
-          userId: userName,
-          password: userPassword,
-          expenditures: [{
+        const response = await axios.post(
+          "http://localhost:5000/users/expense",
+          {
+            userId: userName,
+            password: userPassword,
             amount: amount,
-            expenditure: option.label
-        }]
-      });
+            expenditure: option.label,
+          }
+        );
         return response.data;
       });
 
@@ -133,15 +132,17 @@ export default function AddExpense() {
           transition={{ type: "spring" }}
           className={styles.box}
         >
-          <textarea
+          <textarea //necessary to give value in textarea, optional in input
             className={styles.UserIdColumn}
             rows={5}
+            value={userName} //bind value to state variable
             placeholder="Enter Email ID (required for OTP verification later)"
             onChange={(e) => setUserName(e.target.value)}
           ></textarea>
           <input
             className={styles.UserPasswordColumn}
             rows={5}
+            value={userPassword}
             placeholder="Set your password"
             type="password"
             onChange={(e) => setUserPassword(e.target.value)}
@@ -185,20 +186,24 @@ export default function AddExpense() {
       <div className={`${styles.expensesContainer}`}>
         <div className={`${styles.expenseList}`}>
           <h2>Expenses List</h2>
-          {expenses.map((expense, index) => (
-            <div key={index} className={`${styles.eachExpense}`}>
-              {/* {} will not retrun HTMl  it will return JS...to return HTML use () or leave it as it is */}
-              <p>
-                {expense.option.label}: {expense.amount} INR{" "}
-                <button
-                  onClick={() => handleDelete(index)}
-                  className={`${styles.deleteBtn}`}
-                >
-                  🗑
-                </button>
-              </p>
-            </div>
-          ))}
+          {expenses.length === 0 ? (
+            <p>Add all the expenses and click on Submit</p>
+          ) : (
+            expenses.map((expense, index) => (
+              <div key={index} className={`${styles.eachExpense}`}>
+                {/* {} will not retrun HTMl  it will return JS...to return HTML use () or leave it as it is */}
+                <p>
+                  {expense.option.label}: {expense.amount} INR{" "}
+                  <button
+                    onClick={() => handleDelete(index)}
+                    className={`${styles.deleteBtn}`}
+                  >
+                    🗑
+                  </button>
+                </p>
+              </div>
+            ))
+          )}
         </div>
         <hr></hr>
         {expenses.length > 0 && (

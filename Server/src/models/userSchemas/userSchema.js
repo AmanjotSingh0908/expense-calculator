@@ -5,7 +5,7 @@ const userExpenseSchema = new mongoose.Schema({
     password: { type: String, required: true },
     expenditures: [{
         amount: { type: Number, required: true },
-        expenditure: { type: String, required: true },
+        expenditureType: { type: String, required: true },
     }]
 })
 

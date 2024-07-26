@@ -1,0 +1,62 @@
+/* components/modal/modal.module.css */
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px; /* Adjust as needed */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .input {
+    margin-bottom: 15px;
+  }
+  
+  .input {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submitButton {
+    background: #0070f3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .closeButton{
+    background: #366397;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .submitButton:hover {
+    background: #005bb5;
+  }
+  

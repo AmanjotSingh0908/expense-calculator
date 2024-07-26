@@ -6,17 +6,17 @@ const path = require("path");
 require("dotenv").config({ path: path.resolve(__dirname, "./config/env/.env") });
 
 const app = express();
-const PORT =  5002;
+const PORT =  5000;
 
 app.use(express.json());
 app.use(cors({
     origin: [
-        "http://localhost:3003",
-        "https://cv-builder-8t9d.vercel.app"
+        "http://localhost:3000",
+
     ],
     credentials: true,
     
-}))
+}));
 
 dbConnection();
 
