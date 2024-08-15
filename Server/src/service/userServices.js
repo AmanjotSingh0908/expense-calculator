@@ -17,25 +17,30 @@ const userExpenseService = async (expenseData) => {
     }
 }
 
-const getUser = async(userId, password, otp) => {
-    if(otp != hardcodedOTP) {
-        const error = new Error('Invalid OTP');
-        error.statusCode = 400;
-        throw error;
-    }
-    const expenditures = await UserByIdandPassword(userId, password);
-    if(!expenditures){
-        const error = new Error('getUser: User not found or incorrect password');
-        error.statusCode = 404;
-        throw error;
-    }
+const getUser = async (userId, password, otp) => {
+    try {
+        if (otp !== hardcodedOTP) {
+            const error = new Error('Invalid OTP');
+            error.statusCode = 400;
+            throw error;
+        }
 
-    const expenditureDetails = expenditures.map(expenditure => ({
-        amount: expenditure.amount,
-        expenditureType: expenditure.expenditureType
-    }));
+        const expenditures = await UserByIdandPassword(userId, password);
+        if (!expenditures) {
+            const error = new Error('getUser: User not found or incorrect password');
+            error.statusCode = 404;
+            throw error;
+        }
 
-    return { expenditureDetails };
+        const expenditureDetails = expenditures.map(expenditure => ({
+            amount: expenditure.amount,
+            expenditureType: expenditure.expenditureType
+        }));
+
+        return { expenditureDetails };
+    } catch (error) {
+        throw error; // Re-throw the error to be caught by the controller
+    }
 }
 
 

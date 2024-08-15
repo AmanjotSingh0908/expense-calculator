@@ -1,0 +1,23 @@
+{
+  "unknown": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.22",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "command": [],
+    "options": {
+      "debug": "*"
+    },
+    "error": {
+      "message": "Failed to download and install template from https://github.com/serverless/examples/tree/v4/aws-node due to fetch failed",
+      "stack": "Error: Failed to download and install template from https://github.com/serverless/examples/tree/v4/aws-node due to fetch failed\n    at routeNew (C:\\Users\\Hp\\.serverless\\releases\\4.1.22\\sf-core\\src\\lib\\commands\\onboarding.js:133:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at commandOnboarding (C:\\Users\\Hp\\.serverless\\releases\\4.1.22\\sf-core\\src\\lib\\commands\\onboarding.js:59:10)\n    at catchAllHandler (C:\\Users\\Hp\\.serverless\\releases\\4.1.22\\sf-core\\src\\lib\\commands\\catch-all.js:17:12)\n    at runCommand (C:\\Users\\Hp\\.serverless\\releases\\4.1.22\\sf-core\\src\\lib\\runners\\command.js:41:5)\n    at route (C:\\Users\\Hp\\.serverless\\releases\\4.1.22\\sf-core\\src\\lib\\router.js:132:12)\n    at Object.run2 (C:\\Users\\Hp\\.serverless\\releases\\4.1.22\\sf-core\\src\\index.js:45:3)\n    at run3 (C:\\Users\\Hp\\.serverless\\releases\\4.1.22\\sf-core\\bin\\sf-core.js:33:3)"
+    },
+    "machineId": "b684829266385b6132189b9e987fc560",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

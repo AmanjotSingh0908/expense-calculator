@@ -1,0 +1,98 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f2f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .userExpenseContainer {
+    margin-bottom: 30px;
+  }
+  
+  .h1 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .h3 {
+    font-size: 1.4em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .expenseGroup {
+    margin-bottom: 20px;
+  }
+  
+  .ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .li strong {
+    color: #444;
+  }
+  
+  .expenseChart {
+    margin-top: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #chart {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .h1 {
+      font-size: 2em;
+    }
+  
+    .h2 {
+      font-size: 1.5em;
+    }
+  
+    .h3 {
+      font-size: 1.2em;
+    }
+  
+    .li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

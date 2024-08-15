@@ -22,10 +22,17 @@ const createUserExpense = async (userId, password, amount, expenditure) => {
   }
 };
 
-const UserByIdandPassword = async(userId, password) => {
-  const user = await userExpenseSchema.findOne({userId, password}, {expenditures:1, _id:0}).lean();
-  return user ? user.expenditures : null;
+const UserByIdandPassword = async (userId, password) => {
+  try {
+      const user = await userExpenseSchema.findOne({ userId, password }, { expenditures: 1, _id: 0 }).lean();
+      return user ? user.expenditures : null;
+  } catch (error) {
+      const repoError = new Error('Database error occurred');
+      repoError.statusCode = 500;
+      throw repoError; // Re-throw the error to be caught by the service
+  }
 };
+
 
 module.exports = {
   createUserExpense,

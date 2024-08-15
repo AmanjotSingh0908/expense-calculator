@@ -13,18 +13,19 @@ const userExpenseRegistration = async (req,res) => {
     }
 }
 
-const getUsers = async (req,res) => {
-    const {userId} = req.params;
-    const {password, otp} = req.query;
+const getUsers = async (req, res) => {
+    const { userId } = req.params;
+    const { password, otp } = req.query;
 
     try {
         const user = await getUser(userId, password, otp);
-        return res.staus(200).json(user);
+        return res.status(200).json(user);
     } catch (error) {
-        return res.status(error.statusCode).json({error: error.message});
-        
+        const statusCode = error.statusCode || 500; // Default to 500 if statusCode is not set
+        return res.status(statusCode).json({ error: error.message });
     }
 }
+
 
 module.exports = {
     userExpenseRegistration,

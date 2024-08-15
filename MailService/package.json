@@ -1,25 +1,19 @@
 {
-  "name": "server",
+  "name": "mailservice",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "aws-sdk": "^2.1674.0",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
+    "aws-sdk": "^2.1673.0",
     "express": "^4.19.2",
-    "mongoose": "^8.4.4",
+    "nodemon": "^3.1.4",
     "resend": "^3.5.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.4"
   }
 }
